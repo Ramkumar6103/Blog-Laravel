@@ -16,6 +16,7 @@ Route::get('/',[PostController::class,'index']);
 // Route::get('/',function(){
 //     return view('index');
 // });
-Route::get('/post/{id}',[PostController::class,'post'])->where('id','[0-9]+');
+Route::get('/post/{id}',[PostController::class,'detail'])->where('id','[0-9]+');
 Route::get('/old-url',[PostController::class,'oldUrl']);
 Route::get('/newest-url',[PostController::class,'newUrl'])->name('new_url');
+Route::get('/detail',[PostController::class,'detail']);
